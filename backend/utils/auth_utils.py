@@ -1,6 +1,6 @@
 import jwt
 import bcrypt
-from config import JWT_SECRET, JWT_ALGO
+from backend.config import JWT_SECRET, JWT_ALGO
 
 def hash_password(password: str):
     return bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
