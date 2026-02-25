@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routes import search, watch, suggest, auth, user, trending
+from backend.routes import search, watch, suggest, auth, user, trending
 
 app = FastAPI(title="AbhiTube Pro")
 
