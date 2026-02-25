@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from services.suggestion_service import get_suggestions
+from backend.services.suggestion_service import get_suggestions
 
 router = APIRouter()
 
