@@ -2,7 +2,7 @@
 
 from fastapi import APIRouter, HTTPException, Request
 from fastapi.responses import StreamingResponse
-from services.yt_service import get_stream_urls
+from backend.services.yt_service import get_stream_urls
 from YouTubeMusic.Video_Stream import start_ffmpeg_merge
 import asyncio
 
