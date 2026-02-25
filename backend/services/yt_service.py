@@ -1,6 +1,7 @@
+# backend/services/yt_service.py
+
 from YouTubeMusic.Search import Search
 from YouTubeMusic.Video_Stream import get_video_audio_urls
-from utils.helpers import extract_video_id
 from utils.cache import get_cache, set_cache
 
 async def search_youtube(query: str):
@@ -14,7 +15,7 @@ async def search_youtube(query: str):
     results = []
     for r in data["main_results"]:
         results.append({
-            "url": r["url"],
+            "url": r["url"],   # FULL URL ONLY
             "title": r["title"],
             "channel": r["channel"],
             "duration": r["duration"],
@@ -26,10 +27,6 @@ async def search_youtube(query: str):
     return results
 
 
+# 🔥 DIRECT URL — NO ID EXTRACTION
 def get_stream_urls(url: str):
-    video_id = extract_video_id(url)
-    if not video_id:
-        return None, None
-
-    link = f"https://youtube.com/watch?v={video_id}"
-    return get_video_audio_urls(link)
+    return get_video_audio_urls(url)
