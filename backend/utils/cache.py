@@ -1,6 +1,6 @@
 import redis
 import json
-from config import REDIS_URL
+from backend.config import REDIS_URL
 
 r = redis.Redis.from_url(REDIS_URL, decode_responses=True)
 
