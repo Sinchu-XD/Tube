@@ -2,7 +2,7 @@
 
 from YouTubeMusic.Search import Search
 from YouTubeMusic.Video_Stream import get_video_audio_urls
-from utils.cache import get_cache, set_cache
+from backend.utils.cache import get_cache, set_cache
 
 async def search_youtube(query: str):
     cache_key = f"search:{query}"
