@@ -1,8 +1,8 @@
 import os
 
-MONGO_URL = os.getenv("MONGO_URL", "mongodb://mongo:27017")
-REDIS_URL = os.getenv("REDIS_URL", "redis://redis:6379")
+MONGO_URL = os.getenv("MONGO_URL", "mongodb+srv://Vexera:Vexera@vexera.wtrsmyc.mongodb.net/?appName=Vexera")
+REDIS_URL = os.getenv("REDIS_URL", "https://accepted-woodcock-22573.upstash.io")
 DB_NAME = "abhitube"
 
-JWT_SECRET = os.getenv("JWT_SECRET", "SUPER_SECRET_CHANGE_THIS")
+JWT_SECRET = os.getenv("JWT_SECRET", "e43f42172ea2fbd677e498373ec0d425e3adcb6df2dc754118bc989a7e599482")
 JWT_ALGO = "HS256"
