@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from services.yt_service import search_youtube
+from backend.services.yt_service import search_youtube
 
 router = APIRouter()
 
