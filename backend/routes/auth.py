@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from database import users
-from utils.auth_utils import hash_password, verify_password, create_token
+from backend.utils.auth_utils import hash_password, verify_password, create_token
 
 router = APIRouter()
 
